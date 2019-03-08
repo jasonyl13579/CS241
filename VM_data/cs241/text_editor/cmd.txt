@@ -1,0 +1,4 @@
+i 6 0 insert_line\\
+sp 2 3
+a 1 \\n \a\
+p

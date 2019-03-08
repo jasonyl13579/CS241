@@ -1,0 +1,15 @@
+char *str = "Hello 5 World" ;
+char a[20];
+int b;
+char c[20];
+sscanf(str,"%s %d %s",a,&b,c);
+
+
+Define _GNU_SOURCE
+
+char *b = NULL;
+size_t c = 0;
+FILE* f;
+f = fopen("myfile.txt" , "r");
+ssize_t r = getline(&b,&c,f);
+printf("%s",b);

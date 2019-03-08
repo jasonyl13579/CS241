@@ -1,0 +1,9 @@
+false && echo hello
+false || echo hello
+false; echo hello
+sleep 2 && ls
+false && echo hello
+false || echo hello
+false; echo hello
+sleep 2 && ls
+!history

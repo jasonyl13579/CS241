@@ -1,0 +1,9 @@
+sizeof (argv) , find out argc
+
+program name
+
+Environment variables are stored together with command line arguments, above the stack
+
+4,6   sizeof(ptr) returns how many bytes that hold the pointer and array returns 5+1(\0)
+
+stack

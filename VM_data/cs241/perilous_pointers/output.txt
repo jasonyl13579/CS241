@@ -1,0 +1,2 @@
+Usage: ./part3 [input strings]
+	For testing, try using './part3 testing part 3'

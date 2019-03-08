@@ -1,0 +1,44 @@
+#include "unistd.h"
+int main(){
+	write(1,"Hi!My name is Jason\n",20);
+	return 0 ;
+}
+
+#include "unistd.h"
+int main(){
+	int n =5;
+	for (int i=1;i<=n;i++){
+		for (int j=0;j<i;j++)
+			write(2,"*",1);
+		write(2,"\n",1);
+	}
+	return 0 ;
+}
+
+
+#include "unistd.h"
+#include "sys/types.h"
+#include "sys/stat.h"
+#include "fcntl.h"
+int main(){
+	mode_t mode = S_IRUSR|S_IWUSR;
+	int f = open("hello world.txt",O_CREAT|O_TRUNC|O_RDWR,mode);
+	write(f,"Hi!My name is Jason\n",20);
+	close(f);
+	return 0 ;
+}
+
+
+#include "unistd.h"
+#include "stdio.h"
+int main(){
+	mode_t mode = S_IRUSR|S_IWUSR;
+	close(1);
+	int f = open("hello world.txt",O_CREAT|O_TRUNC|O_RDWR,mode);
+	printf("Hi!My name is Jason\n");
+	return 0 ;
+}
+
+input parameters. printf() will output to stdout first if it is not closed.
+write()'s output depends on the first parameter
+

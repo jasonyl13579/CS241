@@ -1,0 +1,18 @@
+8
+
+1
+
+1-3  48448
+
+0x7fbd9d48
+*(data+3)
+
+12
+
+because the ptr of hello can only be read.
+
+12
+
+5
+x="ab"
+long

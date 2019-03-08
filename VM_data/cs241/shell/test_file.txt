@@ -1,0 +1,9 @@
+sleep 6&
+sleep 6&
+sleep 6&
+sleep 6&
+echo hello; echo world
+sleep 1 && echo sleep
+sleep 5&
+ps
+!history

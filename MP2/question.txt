@@ -1,0 +1,15 @@
+1.Illegal instruction for size > string.size
+
+important 2.sstream fail? Does it means that if I failed building constructer, I failed all test?
+
+	3.print fail
+
+	4.diff between append 1¡B2
+
+5.Does write means handle_write? if write line > document size ??
+
+6.insert_test : attempt to write a line?
+
+	7.loading_saving_test
+
+	8.overwrite_test: what is simple write test?

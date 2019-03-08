@@ -1,0 +1,2368 @@
+[
+  {
+    "timestamp": "2018-04-10 22:00:26.328009",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==12487== Memcheck, a memory error detector\n==12487== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12487== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==12487== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==12487== \n==12487== \n==12487== HEAP SUMMARY:\n==12487==     in use at exit: 0 bytes in 0 blocks\n==12487==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12487== \n==12487== All heap blocks were freed -- no leaks are possible\n==12487== \n==12487== For counts of detected and suppressed errors, rerun with: -v\n==12487== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "valid_delete_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "valid_get_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "valid_list_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "valid_put_test",
+        "ptsEarned": 0.0
+      }
+    ],
+    "revision": "86667",
+    "checksum": "5d2e7572a1e4d7e820c61ce41437d413d87f7889  client.c\n6b8d19d2cd19bf8e64639fe575a124597eb19575  common.c\ndf4dc9539d84a9f223d3e83d28ecb2fa26dd283f  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-11 22:00:26.553346",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we cannot delete invalid files"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we cannot get invalid files"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==17764== Memcheck, a memory error detector\n==17764== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==17764== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==17764== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==17764== \n==17764== \n==17764== HEAP SUMMARY:\n==17764==     in use at exit: 0 bytes in 0 blocks\n==17764==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==17764== \n==17764== All heap blocks were freed -- no leaks are possible\n==17764== \n==17764== For counts of detected and suppressed errors, rerun with: -v\n==17764== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 3.0,
+        "name": "valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0,
+        "name": "valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "valid_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can put valid files"
+      }
+    ],
+    "revision": "87256",
+    "checksum": "5d2e7572a1e4d7e820c61ce41437d413d87f7889  client.c\n6b8d19d2cd19bf8e64639fe575a124597eb19575  common.c\ndf4dc9539d84a9f223d3e83d28ecb2fa26dd283f  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-12 22:00:26.610347",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==22333== Memcheck, a memory error detector\n==22333== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==22333== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==22333== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==22333== \n==22333== \n==22333== HEAP SUMMARY:\n==22333==     in use at exit: 0 bytes in 0 blocks\n==22333==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==22333== \n==22333== All heap blocks were freed -- no leaks are possible\n==22333== \n==22333== For counts of detected and suppressed errors, rerun with: -v\n==22333== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "valid_delete_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "valid_get_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "name": "valid_list_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "valid_put_test",
+        "ptsEarned": 0.0
+      }
+    ],
+    "revision": "87634",
+    "checksum": "5d2e7572a1e4d7e820c61ce41437d413d87f7889  client.c\n6b8d19d2cd19bf8e64639fe575a124597eb19575  common.c\ndf4dc9539d84a9f223d3e83d28ecb2fa26dd283f  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-13 22:00:27.081645",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we cannot delete invalid files"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we cannot get invalid files"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==1798== Memcheck, a memory error detector\n==1798== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==1798== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==1798== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==1798== \n==1798== \n==1798== HEAP SUMMARY:\n==1798==     in use at exit: 112 bytes in 2 blocks\n==1798==   total heap usage: 3 allocs, 1 frees, 122 bytes allocated\n==1798== \n==1798== 48 bytes in 1 blocks are definitely lost in loss record 1 of 2\n==1798==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==1798==    by 0x400C24: parse_args (in .../ymhuang2/nonstop_networking/client)\n==1798==    by 0x400B97: main (in .../ymhuang2/nonstop_networking/client)\n==1798== \n==1798== LEAK SUMMARY:\n==1798==    definitely lost: 48 bytes in 1 blocks\n==1798==    indirectly lost: 0 bytes in 0 blocks\n==1798==      possibly lost: 0 bytes in 0 blocks\n==1798==    still reachable: 64 bytes in 1 blocks\n==1798==         suppressed: 0 bytes in 0 blocks\n==1798== Reachable blocks (those to which a pointer was found) are not shown.\n==1798== To see them, rerun with: --leak-check=full --show-leak-kinds=all\n==1798== \n==1798== For counts of detected and suppressed errors, rerun with: -v\n==1798== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\nMemory error",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": -2.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 3.0,
+        "name": "valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0,
+        "name": "valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "valid_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can put valid files"
+      }
+    ],
+    "revision": "87951",
+    "checksum": "3263e898553dc334ccb73a85f855c165ea34b765  client.c\n090f7de862422cb1408663ba837e120c7ebadc40  common.c\n5fa54571773469661399078bb9e28cd21b291331  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-14 22:00:26.554635",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==7965== Memcheck, a memory error detector\n==7965== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==7965== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==7965== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==7965== \n==7965== \n==7965== HEAP SUMMARY:\n==7965==     in use at exit: 0 bytes in 0 blocks\n==7965==   total heap usage: 8 allocs, 8 frees, 11,107 bytes allocated\n==7965== \n==7965== All heap blocks were freed -- no leaks are possible\n==7965== \n==7965== For counts of detected and suppressed errors, rerun with: -v\n==7965== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_little_data_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_put_test",
+        "ptsEarned": 2.0
+      }
+    ],
+    "revision": "88280",
+    "checksum": "1eb06ad8edcd2e7b55059bb2aa46cac8cbe255c9  client.c\n4315256aa72f275e8634fca151ff8d7c2e080a52  common.c\n06eca21c8b9f88e2f31c63f2d582aea5d15ce4cf  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-15 22:00:26.593687",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==12994== Memcheck, a memory error detector\n==12994== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12994== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==12994== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==12994== \n==12994== \n==12994== HEAP SUMMARY:\n==12994==     in use at exit: 0 bytes in 0 blocks\n==12994==   total heap usage: 8 allocs, 8 frees, 11,107 bytes allocated\n==12994== \n==12994== All heap blocks were freed -- no leaks are possible\n==12994== \n==12994== For counts of detected and suppressed errors, rerun with: -v\n==12994== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_little_data_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files"
+      }
+    ],
+    "revision": "88955",
+    "checksum": "1eb06ad8edcd2e7b55059bb2aa46cac8cbe255c9  client.c\n4315256aa72f275e8634fca151ff8d7c2e080a52  common.c\n06eca21c8b9f88e2f31c63f2d582aea5d15ce4cf  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-16 12:00:26.556841",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==8849== Memcheck, a memory error detector\n==8849== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==8849== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==8849== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==8849== \n==8849== \n==8849== HEAP SUMMARY:\n==8849==     in use at exit: 0 bytes in 0 blocks\n==8849==   total heap usage: 8 allocs, 8 frees, 11,299 bytes allocated\n==8849== \n==8849== All heap blocks were freed -- no leaks are possible\n==8849== \n==8849== For counts of detected and suppressed errors, rerun with: -v\n==8849== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_little_data_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_data_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_put_test",
+        "ptsEarned": 2.0
+      }
+    ],
+    "revision": "89692",
+    "checksum": "749a16c95a78abd4bec71edebe187c9532221258  client.c\n15c30ffc20aaa0cee396b7176315a7dd2e89ec02  common.c\n06eca21c8b9f88e2f31c63f2d582aea5d15ce4cf  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-17 00:00:26.603551",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==28959== Memcheck, a memory error detector\n==28959== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==28959== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==28959== Command: ./client 127.0.0.1:49732 PUT testfile.c testcommon.c\n==28959== \n==28959== \n==28959== HEAP SUMMARY:\n==28959==     in use at exit: 0 bytes in 0 blocks\n==28959==   total heap usage: 8 allocs, 8 frees, 11,299 bytes allocated\n==28959== \n==28959== All heap blocks were freed -- no leaks are possible\n==28959== \n==28959== For counts of detected and suppressed errors, rerun with: -v\n==28959== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_little_data_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_data_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "valid_put_test",
+        "ptsEarned": 2.0
+      }
+    ],
+    "revision": "90730",
+    "checksum": "749a16c95a78abd4bec71edebe187c9532221258  client.c\n15c30ffc20aaa0cee396b7176315a7dd2e89ec02  common.c\n06eca21c8b9f88e2f31c63f2d582aea5d15ce4cf  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-17 22:00:32.987767",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original\nDownloaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "comp_write_test",
+        "ptsEarned": 0.0,
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nEither did not use epoll or set SO_REUSEADDR\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "epoll_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that epoll is being used in the server"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect malformed request(s)",
+        "ptsPossible": 2.0,
+        "name": "malformed_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects malformed requests (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 6.0,
+        "name": "many_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT files with many clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==2761== Memcheck, a memory error detector\n==2761== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2761== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2761== Command: ./network_thread_hook ./server 49732\n==2761== ",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "small_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a small file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "small_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT small files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "ptsPossible": 2.0,
+        "name": "too_little_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too much data",
+        "ptsPossible": 2.0,
+        "name": "too_much_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "two_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can put valid files (your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can put valid files (your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "very_large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a very large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT very large files (your server + AG client)"
+      }
+    ],
+    "revision": "91419",
+    "checksum": "f88739ac9f796b1e5297c2ff11df3edc256ca324  server.c\n749a16c95a78abd4bec71edebe187c9532221258  client.c\n15c30ffc20aaa0cee396b7176315a7dd2e89ec02  common.c\n06eca21c8b9f88e2f31c63f2d582aea5d15ce4cf  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-18 22:00:36.035326",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original\nDownloaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "comp_write_test",
+        "ptsEarned": 0.0,
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nEither did not use epoll or set SO_REUSEADDR\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "epoll_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that epoll is being used in the server"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect malformed request(s)",
+        "ptsPossible": 2.0,
+        "name": "malformed_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects malformed requests (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 6.0,
+        "name": "many_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT files with many clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==28640== Memcheck, a memory error detector\n==28640== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==28640== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==28640== Command: ./network_thread_hook ./server 49732\n==28640== ",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "small_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a small file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "small_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT small files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "ptsPossible": 2.0,
+        "name": "too_little_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too much data",
+        "ptsPossible": 2.0,
+        "name": "too_much_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "two_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can put valid files (your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can put valid files (your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "very_large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a very large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT very large files (your server + AG client)"
+      }
+    ],
+    "revision": "92445",
+    "checksum": "f88739ac9f796b1e5297c2ff11df3edc256ca324  server.c\n749a16c95a78abd4bec71edebe187c9532221258  client.c\n15c30ffc20aaa0cee396b7176315a7dd2e89ec02  common.c\n06eca21c8b9f88e2f31c63f2d582aea5d15ce4cf  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-19 22:00:37.126217",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nPUT timeout :(\nGET timeout :(",
+        "ptsPossible": 4.0,
+        "name": "comp_write_test",
+        "ptsEarned": 0.0,
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nEither did not use epoll or set SO_REUSEADDR\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "epoll_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that epoll is being used in the server"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nPUT timeout :(\nGET timeout :(",
+        "ptsPossible": 4.0,
+        "name": "large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect malformed request(s)",
+        "ptsPossible": 2.0,
+        "name": "malformed_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects malformed requests (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 6.0,
+        "name": "many_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT files with many clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==20945== Memcheck, a memory error detector\n==20945== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==20945== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==20945== Command: ./network_thread_hook ./server 49732\n==20945== ",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nGET timeout :(",
+        "ptsPossible": 4.0,
+        "name": "small_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a small file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "small_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT small files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "ptsPossible": 2.0,
+        "name": "too_little_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nTimeout :(\nDid not detect too much data",
+        "ptsPossible": 2.0,
+        "name": "too_much_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nTimeout :(\nUploaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "two_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nTimeout :(",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nTimeout :(",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nTimeout :(",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nTimeout :(",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_get_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_list_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nPUT timeout :(\nGET timeout :(",
+        "ptsPossible": 4.0,
+        "name": "very_large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a very large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT very large files (your server + AG client)"
+      }
+    ],
+    "revision": "92976",
+    "checksum": "7323f3a2a261b695a45d759f8b8542eb0c20f3a7  server.c\na075080382c3a1edc93c74042caaef55b606a22a  client.c\n17aaf893729f955764e8f124096e3d8f8548a797  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-20 22:00:39.897732",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "comp_write_test",
+        "ptsEarned": 2.0,
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "epoll_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that epoll is being used in the server"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "large_put_get_test",
+        "ptsEarned": 2.0,
+        "description": "PUT a large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "malformed_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that your server detects malformed requests (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 6.0,
+        "name": "many_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT files with many clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==7232== Memcheck, a memory error detector\n==7232== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==7232== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==7232== Command: ./network_thread_hook ./server 49732\n==7232== ",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 4.0,
+        "name": "small_put_get_test",
+        "ptsEarned": 4.0,
+        "description": "PUT a small file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "small_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT small files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "ptsPossible": 2.0,
+        "name": "too_little_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_much_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "two_client_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "very_large_put_get_test",
+        "ptsEarned": 0.0,
+        "description": "PUT a very large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT very large files (your server + AG client)"
+      }
+    ],
+    "revision": "93189",
+    "checksum": "6f60fc5b12644341d9b4520a4e7ac0400162a502  server.c\n3c5e9a1703df6a76bae399e3c397a612569867f0  client.c\n8d72b7ba1b1da8c2188e0dd26b46a0973cc0eb23  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-21 22:00:39.463150",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "comp_write_test",
+        "ptsEarned": 2.0,
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "epoll_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that epoll is being used in the server"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "large_put_get_test",
+        "ptsEarned": 2.0,
+        "description": "PUT a large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "large_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT large files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "malformed_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that your server detects malformed requests (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 6.0,
+        "name": "many_client_put_test",
+        "ptsEarned": 6.0,
+        "description": "Tests that we can PUT files with many clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==32272== Memcheck, a memory error detector\n==32272== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==32272== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==32272== Command: ./network_thread_hook ./server 49732\n==32272== ",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 4.0,
+        "name": "small_put_get_test",
+        "ptsEarned": 4.0,
+        "description": "PUT a small file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "small_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT small files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "ptsPossible": 2.0,
+        "name": "too_little_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_much_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 4.0,
+        "name": "two_client_put_test",
+        "ptsEarned": 4.0,
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "very_large_put_get_test",
+        "ptsEarned": 2.0,
+        "description": "PUT a very large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "very_large_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT very large files (your server + AG client)"
+      }
+    ],
+    "revision": "93606",
+    "checksum": "68dba83744690204d2dab55f9d55fa0a35da3df4  server.c\ne1a97826e81c905f40bda9a055fbcec700de41e5  client.c\n9080bf98041411c111141f01802515e02c61598d  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-22 22:00:42.334966",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (AG server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original",
+        "ptsPossible": 4.0,
+        "name": "comp_write_test",
+        "ptsEarned": 2.0,
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "epoll_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that epoll is being used in the server"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot delete invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we cannot get invalid files (your client, our server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "large_put_get_test",
+        "ptsEarned": 2.0,
+        "description": "PUT a large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "large_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT large files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "malformed_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that your server detects malformed requests (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 6.0,
+        "name": "many_client_put_test",
+        "ptsEarned": 6.0,
+        "description": "Tests that we can PUT files with many clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==17817== Memcheck, a memory error detector\n==17817== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==17817== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==17817== Command: ./network_thread_hook ./server 49732\n==17817== ",
+        "ptsPossible": 0.0,
+        "name": "memory_test",
+        "ptsEarned": 0.0,
+        "description": "Tests for no memory errors or leaks (depends on: PUT)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 4.0,
+        "name": "small_put_get_test",
+        "ptsEarned": 4.0,
+        "description": "PUT a small file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "small_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can PUT small files (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "ptsPossible": 2.0,
+        "name": "too_little_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "too_much_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 4.0,
+        "name": "two_client_put_test",
+        "ptsEarned": 4.0,
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "ua_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, AG client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0,
+        "name": "uu_valid_get_test",
+        "ptsEarned": 3.0,
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_list_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0,
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0,
+        "description": "Tests that we can put valid files (your server, your client)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "ptsPossible": 4.0,
+        "name": "very_large_put_get_test",
+        "ptsEarned": 2.0,
+        "description": "PUT a very large file, and then GET a file (your client + your server)"
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0,
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0,
+        "description": "Tests that we can PUT very large files (your server + AG client)"
+      }
+    ],
+    "revision": "94116",
+    "checksum": "5e7e76fe3d590ff93d92bf7dbf0133ec5ad9fba6  server.c\ne1a97826e81c905f40bda9a055fbcec700de41e5  client.c\n9080bf98041411c111141f01802515e02c61598d  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-23 16:06:41.882093",
+    "testcases": [
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (AG server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original",
+        "name": "comp_write_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that epoll is being used in the server",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "epoll_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot delete invalid files (your client, our server)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files (your client, our server)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "PUT a large file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "name": "large_put_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT large files (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "large_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that your server detects malformed requests (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "malformed_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT files with many clients (your server + AG client)",
+        "ptsPossible": 6.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "many_client_put_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==13956== Memcheck, a memory error detector\n==13956== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==13956== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==13956== Command: ./network_thread_hook ./server 49732\n==13956== ",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "PUT a small file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "small_put_get_test",
+        "ptsEarned": 4.0
+      },
+      {
+        "description": "Tests that we can PUT small files (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "small_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "name": "too_little_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "two_client_put_test",
+        "ptsEarned": 4.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (your server, AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (your server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "PUT a very large file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original (PUT)\nDownloaded file content does not match original (GET)",
+        "name": "very_large_put_get_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that we can PUT very large files (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0
+      }
+    ],
+    "revision": "94521",
+    "checksum": "5e7e76fe3d590ff93d92bf7dbf0133ec5ad9fba6  server.c\ne1a97826e81c905f40bda9a055fbcec700de41e5  client.c\n9080bf98041411c111141f01802515e02c61598d  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-24 00:00:33.214344",
+    "testcases": [
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (AG server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original",
+        "name": "comp_write_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that epoll is being used in the server",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "epoll_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot delete invalid files (your client, our server)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files (your client, our server)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "PUT a large file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "name": "large_put_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT large files (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "large_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that your server detects malformed requests (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "malformed_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT files with many clients (your server + AG client)",
+        "ptsPossible": 6.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "many_client_put_test",
+        "ptsEarned": 6.0
+      },
+      {
+        "description": "Tests for no memory errors or leaks (depends on: PUT)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==5126== Memcheck, a memory error detector\n==5126== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==5126== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==5126== Command: ./network_thread_hook ./server 49732\n==5126== ",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "PUT a small file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "small_put_get_test",
+        "ptsEarned": 4.0
+      },
+      {
+        "description": "Tests that we can PUT small files (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "small_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "name": "too_little_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that your server detects too much errors on PUT (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT large files with two clients (your server + AG client)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "two_client_put_test",
+        "ptsEarned": 4.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (your server, AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (your server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "PUT a very large file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "name": "very_large_put_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT very large files (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "name": "very_large_put_test",
+        "ptsEarned": 0.0
+      }
+    ],
+    "revision": "94994",
+    "checksum": "5e7e76fe3d590ff93d92bf7dbf0133ec5ad9fba6  server.c\ne1a97826e81c905f40bda9a055fbcec700de41e5  client.c\n9080bf98041411c111141f01802515e02c61598d  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  },
+  {
+    "timestamp": "2018-04-25 22:00:46.964437",
+    "testcases": [
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, AG server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (AG server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "au_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests arbitrary files. PUT a file, GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original",
+        "name": "comp_write_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot delete invalid files (your client, our server)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_delete_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files (your client, our server)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "invalid_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "PUT a large file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "name": "large_put_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that your server detects malformed requests (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "malformed_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT files with many clients (your server + your client)",
+        "ptsPossible": 6.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "many_client_put_test",
+        "ptsEarned": 6.0
+      },
+      {
+        "description": "Tests for no memory errors (depends on: PUT and GET)",
+        "ptsPossible": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==25149== Memcheck, a memory error detector\n==25149== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==25149== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==25149== Command: ./network_thread_hook ./server 49732\n==25149== ",
+        "name": "memory_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "PUT a small file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "small_put_get_test",
+        "ptsEarned": 4.0
+      },
+      {
+        "description": "Stress tests (requires LIST, PUT, GET, DELETE) (your server + your client)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nPUT Timeout :(",
+        "name": "stress",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that your server detects too little errors on PUT (your server + AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not detect too little data",
+        "name": "too_little_test",
+        "ptsEarned": 0.0
+      },
+      {
+        "description": "Tests that your server detects too much errors on PUT (your server, AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "too_much_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, your server, AG client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_list_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can put valid files (your server, AG client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "ua_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_delete_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_get_test",
+        "ptsEarned": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work, your server, your client)",
+        "ptsPossible": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_list_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files (your server, your client)",
+        "ptsPossible": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "uu_valid_put_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "PUT a very large file, and then GET a file (your client + your server)",
+        "ptsPossible": 4.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDownloaded file content does not match original (GET)",
+        "name": "very_large_put_get_test",
+        "ptsEarned": 2.0
+      },
+      {
+        "description": "Tests that we can PUT files with very many clients (your server + your client)",
+        "ptsPossible": 16.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "very_many_client_put_test",
+        "ptsEarned": 16.0
+      }
+    ],
+    "revision": "96145",
+    "checksum": "5e7e76fe3d590ff93d92bf7dbf0133ec5ad9fba6  server.c\ne1a97826e81c905f40bda9a055fbcec700de41e5  client.c\n9080bf98041411c111141f01802515e02c61598d  common.c\nbae87329e5903c87bb326df9b030a26258d86df9  common.h\n"
+  }
+]

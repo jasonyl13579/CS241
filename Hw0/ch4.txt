@@ -1,0 +1,48 @@
+add static at the front of a variable
+
+Stack is used for static memory allocation and Heap for dynamic memory allocation
+
+yes, global memory 
+
+free
+
+system fail to give us enough bytes
+
+time returns type time_t, where ctime returns type char*
+
+free a heap that already has been free
+
+use the pointer that has been free
+
+add ptr = NULL to the program
+
+struct Person{
+	char* name;
+	int age;
+	struct Person* (*friends)[];
+}
+typedef struct Person person_t;
+person_t *p1 ;
+p1->name = "Agent Smith";
+p1->age = 128;
+person_t *p2 ;
+p2->name = "Sonny Moore";
+p2->age = 256;
+p1->friends [0]=malloc(sizeof(person_t));
+p1 ->friends [0] = p2;
+p2->friends [0]=malloc(sizeof(person_t));
+p2 ->friends [0] = p1;
+
+person_t* create(char* name,int age){
+	person_t* r = (person_t*) malloc(sizeof(person_t));
+	r -> name = strdup(name);
+	r -> age = strdup(age);
+	return r;
+}
+
+void destroy(person_t*p){
+	free(p->name);
+	free(p->age);
+	memset(p,0,sizeof(person_t));
+	free(p);
+}

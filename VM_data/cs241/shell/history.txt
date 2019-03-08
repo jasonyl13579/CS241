@@ -1,0 +1,10 @@
+ls
+echo this_is_history_file
+cd ..
+sleep 2 && ls
+sleep 2 || ls
+echo Great!!
+sleep 2 && ls
+sleep 2 || ls
+sleep 2; echo hello
+echo Great!!

@@ -1,0 +1,111 @@
+FREE(1)                          User Commands                         FREE(1)
+
+NNAAMMEE
+       free - Display amount of free and used memory in the system
+
+SSYYNNOOPPSSIISS
+       ffrreeee [_o_p_t_i_o_n_s]
+
+DDEESSCCRRIIPPTTIIOONN
+       ffrreeee  displays the total amount of free and used physical and swap mem‐
+       ory in the system, as well as the buffers and caches used by  the  ker‐
+       nel.  The  information  is  gathered by parsing /proc/meminfo. The dis‐
+       played columns are:
+
+       ttoottaall  Total installed memory (MemTotal and SwapTotal in /proc/meminfo)
+
+       uusseedd   Used memory (calculated as ttoottaall - ffrreeee - bbuuffffeerrss - ccaacchhee)
+
+       ffrreeee   Unused memory (MemFree and SwapFree in /proc/meminfo)
+
+       sshhaarreedd Memory used (mostly) by tmpfs (Shmem in /proc/meminfo, available
+              on kernels 2.6.32, displayed as zero if not available)
+
+       bbuuffffeerrss
+              Memory used by kernel buffers (Buffers in /proc/meminfo)
+
+       ccaacchhee  Memory  used  by  the  page  cache and slabs (Cached and Slab in
+              /proc/meminfo)
+
+       bbuuffff//ccaacchhee
+              Sum of bbuuffffeerrss and ccaacchhee
+
+       aavvaaiillaabbllee
+              Estimation of how much memory  is  available  for  starting  new
+              applications,  without swapping. Unlike the data provided by the
+              ccaacchhee or ffrreeee fields, this field takes into account  page  cache
+              and also that not all reclaimable memory slabs will be reclaimed
+              due to items being in use (MemAvailable in /proc/meminfo, avail‐
+              able on kernels 3.14, emulated on kernels 2.6.27+, otherwise the
+              same as ffrreeee)
+
+OOPPTTIIOONNSS
+       --bb, ----bbyytteess
+              Display the amount of memory in bytes.
+
+       --kk, ----kkiilloo
+              Display the amount of memory in kilobytes.  This is the default.
+
+       --mm, ----mmeeggaa
+              Display the amount of memory in megabytes.
+
+       --gg, ----ggiiggaa
+              Display the amount of memory in gigabytes.
+
+       ----tteerraa Display the amount of memory in terabytes.
+
+       --hh, ----hhuummaann
+              Show all output fields automatically scaled  to  shortest  three
+              digit  unit and display the units of print out.  Following units
+              are used.
+
+                B = bytes
+                K = kilos
+                M = megas
+                G = gigas
+                T = teras
+
+              If unit is missing, and you have petabyte of RAM  or  swap,  the
+              number  is  in  terabytes  and columns might not be aligned with
+              header.
+
+       --ww, ----wwiiddee
+              Switch to the wide mode. The wide  mode  produces  lines  longer
+              than  80 characters. In this mode bbuuffffeerrss and ccaacchhee are reported
+              in two separate columns.
+
+       --cc, ----ccoouunntt _c_o_u_n_t
+              Display the result _c_o_u_n_t times.  Requires the --ss option.
+
+       --ll, ----lloohhii
+              Show detailed low and high memory statistics.
+
+       --ss, ----sseeccoonnddss _s_e_c_o_n_d_s
+              Continuously display the result delay _s_e_c_o_n_d_s  apart.   You  may
+              actually  specify any floating point number for _d_e_l_a_y, uusslleeeepp(3)
+              is used for microsecond resolution delay times.
+
+       ----ssii   Use power of 1000 not 1024.
+
+       --tt, ----ttoottaall
+              Display a line showing the column totals.
+
+       ----hheellpp Print help.
+
+       --VV, ----vveerrssiioonn
+              Display version information.
+
+FFIILLEESS
+       /proc/meminfo
+              memory information
+
+SSEEEE AALLSSOO
+       ppss(1), ssllaabbttoopp(1), ttoopp(1), vvmmssttaatt(8).
+
+AAUUTTHHOORRSS
+       Written by Brian Edmonds.
+
+RREEPPOORRTTIINNGG BBUUGGSS
+       Please send bug reports to ⟨procps@freelists.org⟩
+
+procps-ng                          July 2014                           FREE(1)
